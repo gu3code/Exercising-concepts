@@ -5,11 +5,46 @@ div h1{
     padding: 100px;
     border: 20px solid blue;
     margin: 50px;
+    height: 100px;
+    width: 100px;
+    /* important thing 1 */
+    /* here, the height and width is defined to be 100 but when inspecting the element in chrome it says 340x340 */
+    /* the reason is that by default it gathers the border and padding to say the height and width */
+    /* so the height is 340 because padding is 100px, from top and bottom it becomes 200px */
+    /* border is 20px, from top and bottom it becomes 40px */
+    /* it is the same for the width but with the right and left sides */
+    /* if i dont want it to happen i can add a  so it only takes into account the height and width */
+}
+
+.h1-box-size{
+    color: white;
+    background-color: rgb(126, 75, 126);
+    text-align: center;
+    padding: 10px;
+    border: 10px solid blue;
+    margin: 50px;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box; /* now it is 100px */
+    /* but make sure to now have a padding and border that add up bigger than height and width */
+    /* if you do, it will not work because the box-sizing gets the height and width value and subtract with the border and padding */
+    /* if the padding and border are bigger than width and height it will result in a negative value, therefore not working */
+}
+
+h1{
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    border: 20px solid blue;
+    /* important thing 2 */
+    /* the margin doesnt add up between boxes, it actually uses the biggest */
+    /* margin between the two, so this h1 and the div h1 are not 100px away */
+    /* they are just 50px because this is the biggest */
+    margin: 50px;
 }
 
 .h1{
     color: red;
 }
-h1{
-    background-color: pink;
-}
+
