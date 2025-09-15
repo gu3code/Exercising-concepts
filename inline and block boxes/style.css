@@ -1,0 +1,22 @@
+ div h1{
+    background-color: blue;
+    text-align: center ;
+    align-items: center;
+    display: inline-block; /* inline block is beuatiful*/
+    /* display: inline; */
+    /* display: block; */
+    margin: 75px;
+    width: 500px;
+    height: 200px;
+    padding: 75px;
+} 
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+span{
+    text-align: center;
+}
