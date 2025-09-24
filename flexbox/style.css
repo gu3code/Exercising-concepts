@@ -1,0 +1,51 @@
+/* flex 1 is a shorthand for flex-grow flex-shrink and flex-basis */
+
+/* flex grow is how much each div should grow, flex-grow 1 says to them to grow the same amount */
+/* if we apply flex-grow 2 to one div inside, the div would grow twice as much as the others */
+
+
+/* flex shrink is how much a div should shrink only when the size of the childs is bigger than the parent */
+/* so if its one, they will shrink evenly - if its two+ it'll shrink more - if you dont want one to shrink, set it to 0 - */
+
+/* flex basis sets a initial size for a flex item so the flex-grow and shrink starts from the baseline set */
+/* flex basis auto --> the size will be the width and height defined*/
+/* flex basis 0, the initial size is 0 and items will grow based on flex-grow  */
+/* flex basis (value) will define the starting value -  example: flex-basis:100px*/
+
+/* flex initial causes grow: 0  - shrink: 1 - basis: auto */
+/* flex auto causes grow: 1 - shrink: 1 - basis: auto */
+/* flex none causes grow: 0 - shrink: 0 - basis: auto */
+/* flex <postiive number> causes grow: 1 - shrink: 1 -  basis: 0 */
+
+
+
+
+
+
+.container{
+    display: flex;
+    background-color: black;
+    padding: 12px;
+    border: 3px solid red;
+    height: auto;
+    width: 70%;
+    
+}
+
+.container div{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin: 1px 15px 1px 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    flex: 9;
+    
+}
+
+.item1{
+    flex-grow: 0;
+}
+
+*{background-color: black; }
