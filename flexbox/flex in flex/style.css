@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    width: 600px;
+}
+
+.container div{
+    background-color: purple;
+    border: solid red 5px;
+    height: 200px;
+    flex-grow: 1;
+}
+
+.container2{
+    display: flex;
+    flex-grow: 1;
+}
+
+.container .container2 div{
+    background-color: orange;
+    border: solid black 5px;
+    height: 190px;
+}
